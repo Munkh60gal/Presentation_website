@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/268525ace0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Миний пресентэйшн</title>
+</head>
+<body>
+    <!-- Huudas 1 - Taniltsuulga -->
+    <section id="page-1" class="page">
+        <h1>Миний пресентэйшнд тавтай морил</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur saepe architecto. Ullam, itaque a! Minima repellendus tenetur labore corrupti quam, consequuntur cumque sed temporibus in assumenda optio eligendi officia?</p>
+        <div>
+            <a href="#page-2" class="btn">Дараагийн хуудас <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+    <!-- Huudas 2 -->
+    <section id="page-2" class="page">
+        <h1>Хуудас 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur saepe architecto. Ullam, itaque a! Minima repellendus tenetur labore corrupti quam, consequuntur cumque sed temporibus in assumenda optio eligendi officia?</p>
+        <div>
+            <a href="#page-1" class="btn btn-dark">Өмнөх хуудас <i class="fas fa-arrow-circle-up"></i></a>
+            <a href="#page-3" class="btn">Дараагийн хуудас <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+    <!-- Huudas 3 -->
+    <section id="page-3" class="page">
+        <h1>Хуудас 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur saepe architecto. Ullam, itaque a! Minima repellendus tenetur labore corrupti quam, consequuntur cumque sed temporibus in assumenda optio eligendi officia?</p>
+        <div>
+            <a href="#page-2" class="btn btn-dark">Өмнөх хуудас <i class="fas fa-arrow-circle-up"></i></a>
+            <a href="#page-4" class="btn">Дараагийн хуудас <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+    </section>
+    <!-- Huudas 4 -->
+    <section id="page-4" class="page">
+        <h1>Хуудас 4</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequuntur saepe architecto. Ullam, itaque a! Minima repellendus tenetur labore corrupti quam, consequuntur cumque sed temporibus in assumenda optio eligendi officia?</p>
+        <div>
+            <a href="#page-3" class="btn">Өмнөх хуудас <i class="fas fa-arrow-circle-up"></i></a>
+        </div>
+    </section>
+
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script>
+        // Smooth Scroll
+        $('.btn').on
+        ('click', function(event)
+            {
+                if (this.hash !== '')
+                {
+                    event.preventDefault();
+                    const hash = this.hash;
+                    $('html, body').animate
+                    (
+                        {
+                            scrollTop: $(hash).offset().top
+                        },
+                        800
+                    );
+                }
+            }
+        );
+    </script>
+
+</body>
+</html>
